@@ -254,6 +254,8 @@ Risk Score > 50 → Suspicious Document
 ## 📥 Example API Response
 
 <img width="1341" height="719" alt="Screenshot (485)" src="https://github.com/user-attachments/assets/ba167820-66c0-4646-95e6-4675743a920d" />
+<img width="1334" height="637" alt="Screenshot (486)" src="https://github.com/user-attachments/assets/c65a41c8-bb75-4a76-8bdb-ae9b7764db10" />
+
 
 
 ---
