@@ -85,3 +85,139 @@ Text is extracted from the document using **Tesseract OCR**, allowing the system
 ---
 
 # 🏗️ System Architecture
+User Uploads ID Image
+↓
+FastAPI API Endpoint
+↓
+Image Validation
+↓
+Image Analysis (Blur / Edge / ELA)
+↓
+OCR Text Extraction
+↓
+Fraud Risk Score Calculation
+↓
+Fraud Detection Report
+
+
+---
+
+# 📂 Project Structure
+
+
+ID_Fraud_Detection
+│
+├── main.py
+├── fraud_detector.py
+├── image_validator.py
+├── report_generator.py
+│
+├── uploads/
+│
+├── requirements.txt
+└── README.md
+
+
+### File Description
+
+**main.py**
+
+Main FastAPI application file.  
+Handles image uploads, validation, analysis, and report generation.
+
+**image_validator.py**
+
+Validates whether the uploaded file is a supported image format such as JPG, JPEG, or PNG.
+
+**fraud_detector.py**
+
+Performs the core image analysis including:
+
+- Blur detection
+- Edge detection
+- Error Level Analysis
+- OCR text extraction
+
+**report_generator.py**
+
+Calculates the fraud risk score and generates the final fraud detection report.
+
+**uploads/**
+
+Stores uploaded images temporarily for processing.
+
+---
+
+# 🚀 Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/ID-Fraud-Detection.git
+cd ID-Fraud-Detection
+Create Virtual Environment
+python -m venv venv
+Activate Virtual Environment
+
+Windows:
+
+venv\Scripts\activate
+Install Dependencies
+pip install -r requirements.txt
+▶️ Running the Application
+
+Start the FastAPI server:
+
+uvicorn main:app --reload
+
+The application will run at:
+
+http://127.0.0.1:8000
+📄 API Documentation
+
+FastAPI automatically generates interactive documentation using Swagger UI.
+
+Open in browser:
+
+http://127.0.0.1:8000/docs
+
+From this interface you can:
+
+Upload ID document images
+
+Execute the fraud detection API
+
+View the generated fraud report
+
+📊 Fraud Risk Scoring
+
+The system calculates a fraud risk score based on detected anomalies.
+
+Condition	Score
+Blur detected	+30
+Low edge consistency	+30
+High ELA score	+40
+Decision Rule
+Risk Score 0 – 50 → Likely Genuine
+Risk Score > 50 → Suspicious Document
+📥 Example API Response
+{
+ "risk_score": 65,
+ "status": "Suspicious Document",
+ "analysis": {
+   "blur_detected": false,
+   "edge_score": 0.02,
+   "ela_score": 25,
+   "extracted_text": "Name: John Doe"
+ }
+}
+
+
+👩‍💻 Author
+
+Alakananda P
+
+⭐ If you found this project useful, consider giving the repository a star.
+
+
+---
