@@ -253,18 +253,8 @@ Risk Score > 50 → Suspicious Document
 
 ## 📥 Example API Response
 
-```json
-{
- "risk_score": 65,
- "status": "Suspicious Document",
- "analysis": {
-   "blur_detected": false,
-   "edge_score": 0.02,
-   "ela_score": 25,
-   "extracted_text": "Name: John Doe"
- }
-}
-```
+<img width="1341" height="719" alt="Screenshot (485)" src="https://github.com/user-attachments/assets/ba167820-66c0-4646-95e6-4675743a920d" />
+
 
 ---
 
